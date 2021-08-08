@@ -5,7 +5,7 @@ const router = new Router();
 
 router.get("/", postController.getAllPosts);
 router.get("/:id", postController.getSinglePost);
-router.post("/", upload.single("image"), postController.createNewPost);
+router.post("/", upload.array("image"), postController.createNewPost);
 router.put("/", postController.updateSinglePost);
 router.delete("/", postController.deleteSinglePost);
 
